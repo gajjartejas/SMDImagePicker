@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "SMDImagePicker"
-  s.version = "1"
+  s.version = "0.1.0"
   s.summary = "A UIImagePickerController wrapper."
 
   s.description = <<-DESC
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.license = { :type => "MIT", :file => "LICENSE" }
 
   s.author = { "gajjartejas" => "gajjartejas26@gmail.com" }
-  s.social_media_url = "https://www.linkedin.com/in/gajjartejas/"
+  s.social_media_url = "https://twitter.com/gajjartejas"
 
   s.platform = :ios, '8.0'
   s.source = {
