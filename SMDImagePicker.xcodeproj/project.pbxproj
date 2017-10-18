@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		960FCD641F00C548003CE845 /* SMDImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AE462E1EFFC91900E32EAF /* SMDImagePicker.framework */; };
+		960FCD651F00C548003CE845 /* SMDImagePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96AE462E1EFFC91900E32EAF /* SMDImagePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		962E91111F34A7E20075DBB1 /* SMDImagePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E91101F34A7E20075DBB1 /* SMDImagePickerExtension.swift */; };
+		96571CE71F0008F900792035 /* SMDImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571CE61F0008F900792035 /* SMDImagePicker.swift */; };
+		96571CEA1F000C9D00792035 /* SMDImagePickerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571CE91F000C9D00792035 /* SMDImagePickerOptions.swift */; };
+		96571CEC1F000D5600792035 /* SMDImagePickerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571CEB1F000D5600792035 /* SMDImagePickerEnum.swift */; };
+		96AE46331EFFC91900E32EAF /* SMDImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 96AE46311EFFC91900E32EAF /* SMDImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96AE46401EFFCA8800E32EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE463F1EFFCA8800E32EAF /* AppDelegate.swift */; };
+		96AE46421EFFCA8800E32EAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE46411EFFCA8800E32EAF /* ViewController.swift */; };
+		96AE46451EFFCA8800E32EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AE46431EFFCA8800E32EAF /* Main.storyboard */; };
+		96AE46471EFFCA8800E32EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AE46461EFFCA8800E32EAF /* Assets.xcassets */; };
+		96AE464A1EFFCA8800E32EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AE46481EFFCA8800E32EAF /* LaunchScreen.storyboard */; };
+		96C688D21F93307400B9B0DB /* SMDMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C688D11F93307400B9B0DB /* SMDMedia.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		960FCD661F00C548003CE845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96AE46251EFFC91900E32EAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96AE462D1EFFC91900E32EAF;
+			remoteInfo = SMDImagePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		960FCD681F00C549003CE845 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				960FCD651F00C548003CE845 /* SMDImagePicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		962E91101F34A7E20075DBB1 /* SMDImagePickerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDImagePickerExtension.swift; sourceTree = "<group>"; };
+		96571CE61F0008F900792035 /* SMDImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDImagePicker.swift; sourceTree = "<group>"; };
+		96571CE91F000C9D00792035 /* SMDImagePickerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDImagePickerOptions.swift; sourceTree = "<group>"; };
+		96571CEB1F000D5600792035 /* SMDImagePickerEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDImagePickerEnum.swift; sourceTree = "<group>"; };
+		96AE462E1EFFC91900E32EAF /* SMDImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMDImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AE46311EFFC91900E32EAF /* SMDImagePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMDImagePicker.h; sourceTree = "<group>"; };
+		96AE46321EFFC91900E32EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96AE463D1EFFCA8800E32EAF /* SMDImagePickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMDImagePickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AE463F1EFFCA8800E32EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96AE46411EFFCA8800E32EAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96AE46441EFFCA8800E32EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96AE46461EFFCA8800E32EAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96AE46491EFFCA8800E32EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96AE464B1EFFCA8800E32EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96C688D11F93307400B9B0DB /* SMDMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMDMedia.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96AE462A1EFFC91900E32EAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE463A1EFFCA8800E32EAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960FCD641F00C548003CE845 /* SMDImagePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96AE46241EFFC91900E32EAF = {
+			isa = PBXGroup;
+			children = (
+				96AE46301EFFC91900E32EAF /* SMDImagePicker */,
+				96AE463E1EFFCA8800E32EAF /* SMDImagePickerExample */,
+				96AE462F1EFFC91900E32EAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96AE462F1EFFC91900E32EAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96AE462E1EFFC91900E32EAF /* SMDImagePicker.framework */,
+				96AE463D1EFFCA8800E32EAF /* SMDImagePickerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96AE46301EFFC91900E32EAF /* SMDImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				96C688D11F93307400B9B0DB /* SMDMedia.swift */,
+				96571CE61F0008F900792035 /* SMDImagePicker.swift */,
+				962E91101F34A7E20075DBB1 /* SMDImagePickerExtension.swift */,
+				96571CE91F000C9D00792035 /* SMDImagePickerOptions.swift */,
+				96571CEB1F000D5600792035 /* SMDImagePickerEnum.swift */,
+				96AE46311EFFC91900E32EAF /* SMDImagePicker.h */,
+				96AE46321EFFC91900E32EAF /* Info.plist */,
+			);
+			path = SMDImagePicker;
+			sourceTree = "<group>";
+		};
+		96AE463E1EFFCA8800E32EAF /* SMDImagePickerExample */ = {
+			isa = PBXGroup;
+			children = (
+				96AE463F1EFFCA8800E32EAF /* AppDelegate.swift */,
+				96AE46411EFFCA8800E32EAF /* ViewController.swift */,
+				96AE46431EFFCA8800E32EAF /* Main.storyboard */,
+				96AE46461EFFCA8800E32EAF /* Assets.xcassets */,
+				96AE46481EFFCA8800E32EAF /* LaunchScreen.storyboard */,
+				96AE464B1EFFCA8800E32EAF /* Info.plist */,
+			);
+			path = SMDImagePickerExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		96AE462B1EFFC91900E32EAF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE46331EFFC91900E32EAF /* SMDImagePicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		96AE462D1EFFC91900E32EAF /* SMDImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AE46361EFFC91900E32EAF /* Build configuration list for PBXNativeTarget "SMDImagePicker" */;
+			buildPhases = (
+				96AE46291EFFC91900E32EAF /* Sources */,
+				96AE462A1EFFC91900E32EAF /* Frameworks */,
+				96AE462B1EFFC91900E32EAF /* Headers */,
+				96AE462C1EFFC91900E32EAF /* Resources */,
+				96E3CD4B1F93617E00FA37EA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMDImagePicker;
+			productName = SMDImagePicker;
+			productReference = 96AE462E1EFFC91900E32EAF /* SMDImagePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96AE463C1EFFCA8800E32EAF /* SMDImagePickerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AE464C1EFFCA8800E32EAF /* Build configuration list for PBXNativeTarget "SMDImagePickerExample" */;
+			buildPhases = (
+				96AE46391EFFCA8800E32EAF /* Sources */,
+				96AE463A1EFFCA8800E32EAF /* Frameworks */,
+				96AE463B1EFFCA8800E32EAF /* Resources */,
+				960FCD681F00C549003CE845 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				960FCD671F00C548003CE845 /* PBXTargetDependency */,
+			);
+			name = SMDImagePickerExample;
+			productName = SMDImagePickerExample;
+			productReference = 96AE463D1EFFCA8800E32EAF /* SMDImagePickerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96AE46251EFFC91900E32EAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Gajjar Tejas";
+				TargetAttributes = {
+					96AE462D1EFFC91900E32EAF = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2B62CVTC32;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					96AE463C1EFFCA8800E32EAF = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2B62CVTC32;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 96AE46281EFFC91900E32EAF /* Build configuration list for PBXProject "SMDImagePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96AE46241EFFC91900E32EAF;
+			productRefGroup = 96AE462F1EFFC91900E32EAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96AE462D1EFFC91900E32EAF /* SMDImagePicker */,
+				96AE463C1EFFCA8800E32EAF /* SMDImagePickerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96AE462C1EFFC91900E32EAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE463B1EFFCA8800E32EAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE464A1EFFCA8800E32EAF /* LaunchScreen.storyboard in Resources */,
+				96AE46471EFFCA8800E32EAF /* Assets.xcassets in Resources */,
+				96AE46451EFFCA8800E32EAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96E3CD4B1F93617E00FA37EA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96AE46291EFFC91900E32EAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C688D21F93307400B9B0DB /* SMDMedia.swift in Sources */,
+				96571CE71F0008F900792035 /* SMDImagePicker.swift in Sources */,
+				96571CEC1F000D5600792035 /* SMDImagePickerEnum.swift in Sources */,
+				962E91111F34A7E20075DBB1 /* SMDImagePickerExtension.swift in Sources */,
+				96571CEA1F000C9D00792035 /* SMDImagePickerOptions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AE46391EFFCA8800E32EAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AE46421EFFCA8800E32EAF /* ViewController.swift in Sources */,
+				96AE46401EFFCA8800E32EAF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		960FCD671F00C548003CE845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96AE462D1EFFC91900E32EAF /* SMDImagePicker */;
+			targetProxy = 960FCD661F00C548003CE845 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96AE46431EFFCA8800E32EAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96AE46441EFFCA8800E32EAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96AE46481EFFCA8800E32EAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96AE46491EFFCA8800E32EAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96AE46341EFFC91900E32EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96AE46351EFFC91900E32EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		96AE46371EFFC91900E32EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2B62CVTC32;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SMDImagePicker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tejas.gajjar.SMDImagePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		96AE46381EFFC91900E32EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2B62CVTC32;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SMDImagePicker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tejas.gajjar.SMDImagePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		96AE464D1EFFCA8800E32EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2B62CVTC32;
+				INFOPLIST_FILE = SMDImagePickerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tejas.gajjar.SMDImagePickerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		96AE464E1EFFCA8800E32EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2B62CVTC32;
+				INFOPLIST_FILE = SMDImagePickerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tejas.gajjar.SMDImagePickerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96AE46281EFFC91900E32EAF /* Build configuration list for PBXProject "SMDImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE46341EFFC91900E32EAF /* Debug */,
+				96AE46351EFFC91900E32EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AE46361EFFC91900E32EAF /* Build configuration list for PBXNativeTarget "SMDImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE46371EFFC91900E32EAF /* Debug */,
+				96AE46381EFFC91900E32EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AE464C1EFFCA8800E32EAF /* Build configuration list for PBXNativeTarget "SMDImagePickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AE464D1EFFCA8800E32EAF /* Debug */,
+				96AE464E1EFFCA8800E32EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96AE46251EFFC91900E32EAF /* Project object */;
+}
