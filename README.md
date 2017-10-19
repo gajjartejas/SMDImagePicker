@@ -7,7 +7,7 @@
 [![Version](http://img.shields.io/badge/version-0.1.0-green.svg?style=flat)](https://github.com/gajjartejas/SMDImagePicker)
 [![Cocoapods](http://img.shields.io/badge/Cocoapods-available-green.svg?style=flat)](http://cocoadocs.org/docsets/SMDImagePicker/)
 
-A Clouser based UIImagePickerController wrapper in Swift."
+A Clouser based UIImagePickerController wrapper in Swift.
 ***
 
 [![](Screenshots/1.png)](Screenshots/1.png)
