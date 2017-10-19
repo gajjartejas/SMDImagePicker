@@ -97,18 +97,19 @@ class ViewController: UIViewController {
     func recordVideoAction() {
         
         //Optional
+        //TODO: Maximum duration
         let options = SMDImagePicker.PhotoCaptureOptions(allowsEditing: true,
                                                          cameraDevice: .rear,
                                                          mediaTypes: [kUTTypeMovie as String],
                                                          flashMode: .auto)
         imagePicker.configure(options)
         
-        imagePicker.capture(media: .takeVideo, presentFrom: self) { (image, status) in
+        imagePicker.capture(media: .takeVideo, presentFrom: self) { (media, status) in
             if status == .success {
-                let thumb = image?.videoThumb
+                let thumb = media?.videoThumb
                 
                 self.imageView.image = thumb
-                self.videoUrl = image!.mediaURL! as URL
+                self.videoUrl = media!.mediaURL! as URL
                 self.playButton.isHidden = false
                 
             } else {
@@ -133,9 +134,9 @@ class ViewController: UIViewController {
     func choosePhotoAction() {
         
         //Optional
-        let photoGallaryOptions = SMDImagePicker.PhotoGallaryOptions(allowsEditing: true,
+        let options = SMDImagePicker.PhotoGallaryOptions(allowsEditing: true,
                                                                      mediaTypes: [kUTTypeImage as String])
-        imagePicker.configure(photoGallaryOptions)
+        imagePicker.configure(options)
         
         imagePicker.choose(media: .choosePhoto, presentFrom: self) { (media, status) in
             if status == .success {
@@ -168,19 +169,19 @@ class ViewController: UIViewController {
     func chooseVideoAction() {
         
         //Optional
-        let photoGallaryOptions = SMDImagePicker.VideoGallaryOptions(allowsEditing: false,
+        let options = SMDImagePicker.VideoGallaryOptions(allowsEditing: false,
                                                                      mediaTypes: [kUTTypeMovie as String],
                                                                      maximumDuration: 2*60, //Duration 2 Minutes
                                                                      quality: UIImagePickerControllerQualityType.typeMedium)
-        imagePicker.configure(photoGallaryOptions)
+        imagePicker.configure(options)
         
-        imagePicker.choose(media: .chooseVideo, presentFrom: self) { (image, status) in
+        imagePicker.choose(media: .chooseVideo, presentFrom: self) { (media, status) in
             if status == .success {
                 
-                let thumb = image?.videoThumb
+                let thumb = media?.videoThumb
                 
                 self.imageView.image = thumb
-                self.videoUrl = image!.mediaURL! as URL
+                self.videoUrl = media!.mediaURL! as URL
                 self.playButton.isHidden = false
 
                 
