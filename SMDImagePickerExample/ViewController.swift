@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func pickTapped(_ sender: Any) {
         
         let actionsheet = UIAlertController(title: nil, message: "Choose", preferredStyle: .actionSheet)
-        
+        actionsheet.popoverPresentationController?.sourceView  = self.playButton
         let capturePhotoAction = UIAlertAction(title: "Capture Photo", style: .default) { (_) in
             self.capturePhotoAction()
         }
@@ -97,11 +97,12 @@ class ViewController: UIViewController {
     func recordVideoAction() {
         
         //Optional
-        //TODO: Maximum duration
-        let options = SMDImagePicker.PhotoCaptureOptions(allowsEditing: true,
-                                                         cameraDevice: .rear,
-                                                         mediaTypes: [kUTTypeMovie as String],
-                                                         flashMode: .auto)
+        let options = SMDImagePicker.VideoRecorderOptions(allowsEditing: true,
+                                                          cameraDevice: .rear,
+                                                          maximumDuration: 2*60, //Duration 2 Minutes
+                                                          quality: .typeHigh,
+                                                          flashMode: .auto)
+        
         imagePicker.configure(options)
         
         imagePicker.capture(media: .takeVideo, presentFrom: self) { (media, status) in
@@ -135,9 +136,11 @@ class ViewController: UIViewController {
         
         //Optional
         let options = SMDImagePicker.PhotoGallaryOptions(allowsEditing: true,
-                                                                     mediaTypes: [kUTTypeImage as String])
+                                                         mediaTypes: [kUTTypeImage as String])
         imagePicker.configure(options)
         
+        imagePicker.ipadOptions = SMDImagePicker.IPadOptions()
+        imagePicker.ipadOptions.sourceView = self.playButton
         imagePicker.choose(media: .choosePhoto, presentFrom: self) { (media, status) in
             if status == .success {
                 self.imageView.image = media?.editedImage
@@ -170,9 +173,10 @@ class ViewController: UIViewController {
         
         //Optional
         let options = SMDImagePicker.VideoGallaryOptions(allowsEditing: false,
-                                                                     mediaTypes: [kUTTypeMovie as String],
-                                                                     maximumDuration: 2*60, //Duration 2 Minutes
-                                                                     quality: UIImagePickerControllerQualityType.typeMedium)
+                                                         mediaTypes: [kUTTypeMovie as String],
+                                                         maximumDuration: 2*60, //Duration 2 Minutes
+            
+            quality: UIImagePickerControllerQualityType.typeMedium)
         imagePicker.configure(options)
         
         imagePicker.choose(media: .chooseVideo, presentFrom: self) { (media, status) in
@@ -183,7 +187,6 @@ class ViewController: UIViewController {
                 self.imageView.image = thumb
                 self.videoUrl = media!.mediaURL! as URL
                 self.playButton.isHidden = false
-
                 
             } else {
                 
@@ -212,5 +215,4 @@ class ViewController: UIViewController {
             player.play()
         }
     }
-    
 }

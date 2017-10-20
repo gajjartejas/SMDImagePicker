@@ -14,12 +14,20 @@ import Photos
 
 extension SMDImagePicker {
     
+    public struct IPadOptions {
+        public var sourceView : UIView?
+        
+        public init(sourceView :UIView? = nil) {
+            self.sourceView = sourceView
+        }
+    }
+    
     public struct PhotoCaptureOptions {
         
-        var allowsEditing: Bool = false
-        var cameraDevice: UIImagePickerControllerCameraDevice = .front
-        var mediaTypes: [String] = [kUTTypeImage as String]
-        var flashMode: UIImagePickerControllerCameraFlashMode = .auto
+       public var allowsEditing: Bool = false
+       public var cameraDevice: UIImagePickerControllerCameraDevice = .front
+       public var mediaTypes: [String] = [kUTTypeImage as String]
+       public var flashMode: UIImagePickerControllerCameraFlashMode = .auto
         
         public init(allowsEditing: Bool = true,
                     cameraDevice: UIImagePickerControllerCameraDevice = .front,

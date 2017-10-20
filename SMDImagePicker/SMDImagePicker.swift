@@ -19,54 +19,46 @@ public class SMDImagePicker: NSObject {
     internal var pickPhotoEnd: SMDCompletion?
     internal var mediaType: SMDMediaType = .none
     
-    // MARK : Private Properties: For Photo Capture
-    private var photoCaptureMediaTypes: [String] = [kUTTypeImage as String]
-    private var photoCaptureAllowsEditing: Bool = false
-    private var photoCapturecameraDevice: UIImagePickerControllerCameraDevice = .front
-    private var photoCaptureFlashMode: UIImagePickerControllerCameraFlashMode = .auto
+    /// Properties: For Photo Capture
+    public var photoCaptureOptions = PhotoCaptureOptions()
     
-    // MARK : Private Properties: For Video Record
-    private var videoRecorderAllowsEditing: Bool = false
-    private var videoRecordercameraDevice: UIImagePickerControllerCameraDevice = .front
-    private var videoRecorderMaximumDuration: TimeInterval = 60*10 // default value is 10 minutes.
-    private var videoRecorderQuality: UIImagePickerControllerQualityType = .typeMedium
-    private var videoRecorderFlashMode: UIImagePickerControllerCameraFlashMode = .auto
+    /// Properties: For Video Record
+    public var videoRecorderOptions = VideoRecorderOptions()
     
-    // MARK : Private Properties: For Taking Photo From Gallary
-    private var photoGallaryMediaTypes: [String] = [kUTTypeImage as String]
-    private var photoGallaryAllowsEditing: Bool = false
+    /// Properties: For Taking Photo From Gallary
+    public var photoGallaryOptions = PhotoGallaryOptions()
     
-    // MARK : Private Properties: For Taking Video From Gallary
-    private var videoGallaryAllowsEditing: Bool = false
-    private var videoGallaryMediaTypes: [String] = [kUTTypeMovie as String]
-    private var videoGallaryMaximumDuration: TimeInterval = 60*10// default value is 10 minutes.
-    private var videoGallaryQuality: UIImagePickerControllerQualityType = .typeMedium
+    /// Properties: For Taking Video From Gallary
+    public var videoGallaryOptions = VideoGallaryOptions()
+    
+    /// Properties: For Ipad
+    public var ipadOptions = IPadOptions()
     
     public func configure(_ configuration: PhotoCaptureOptions) {
-        self.photoCaptureMediaTypes = configuration.mediaTypes
-        self.photoCaptureAllowsEditing = configuration.allowsEditing
-        self.photoCapturecameraDevice = configuration.cameraDevice
-        self.photoCaptureFlashMode = configuration.flashMode
+        self.photoCaptureOptions.mediaTypes = configuration.mediaTypes
+        self.photoCaptureOptions.allowsEditing = configuration.allowsEditing
+        self.photoCaptureOptions.cameraDevice = configuration.cameraDevice
+        self.photoCaptureOptions.flashMode = configuration.flashMode
     }
     
     public func configure(_ configuration: VideoRecorderOptions) {
-        self.videoRecorderAllowsEditing = configuration.allowsEditing
-        self.videoRecordercameraDevice = configuration.cameraDevice
-        self.videoRecorderMaximumDuration = configuration.maximumDuration
-        self.videoRecorderQuality = configuration.quality
-        self.videoRecorderFlashMode = configuration.flashMode
+        self.videoRecorderOptions.allowsEditing = configuration.allowsEditing
+        self.videoRecorderOptions.cameraDevice = configuration.cameraDevice
+        self.videoRecorderOptions.maximumDuration = configuration.maximumDuration
+        self.videoRecorderOptions.quality = configuration.quality
+        self.videoRecorderOptions.flashMode = configuration.flashMode
     }
     
     public func configure(_ configuration: PhotoGallaryOptions) {
-        self.photoGallaryMediaTypes = configuration.mediaTypes
-        self.photoGallaryAllowsEditing = configuration.allowsEditing
+        self.photoGallaryOptions.mediaTypes = configuration.mediaTypes
+        self.photoGallaryOptions.allowsEditing = configuration.allowsEditing
     }
     
     public func configure(_ configuration: VideoGallaryOptions) {
-        self.videoGallaryAllowsEditing = configuration.allowsEditing
-        self.videoGallaryMediaTypes = configuration.mediaTypes
-        self.videoGallaryMaximumDuration = configuration.maximumDuration
-        self.videoGallaryQuality = configuration.quality
+        self.videoGallaryOptions.allowsEditing = configuration.allowsEditing
+        self.videoGallaryOptions.mediaTypes = configuration.mediaTypes
+        self.videoGallaryOptions.maximumDuration = configuration.maximumDuration
+        self.videoGallaryOptions.quality = configuration.quality
     }
     
     public func capture(media: SMDMediaType, presentFrom rootVC: UIViewController, completion: SMDCompletion?) {
@@ -81,16 +73,16 @@ public class SMDImagePicker: NSObject {
                     controller.delegate = self
                     
                     if media == .takePhoto {
-                        controller.mediaTypes = self.photoCaptureMediaTypes
-                        controller.allowsEditing = self.photoCaptureAllowsEditing
-                        controller.cameraDevice = self.photoCapturecameraDevice
-                        controller.cameraFlashMode = self.photoCaptureFlashMode
+                        controller.mediaTypes = self.photoCaptureOptions.mediaTypes
+                        controller.allowsEditing = self.photoCaptureOptions.allowsEditing
+                        controller.cameraDevice = self.photoCaptureOptions.cameraDevice
+                        controller.cameraFlashMode = self.photoCaptureOptions.flashMode
                     } else if media == .takeVideo {
-                        controller.allowsEditing = self.videoRecorderAllowsEditing
-                        controller.cameraDevice = self.videoRecordercameraDevice
-                        controller.videoMaximumDuration = self.videoRecorderMaximumDuration
-                        controller.videoQuality = self.videoRecorderQuality
-                        controller.cameraFlashMode = self.videoRecorderFlashMode
+                        controller.allowsEditing = self.videoRecorderOptions.allowsEditing
+                        controller.cameraDevice = self.videoRecorderOptions.cameraDevice
+                        controller.videoMaximumDuration = self.videoRecorderOptions.maximumDuration
+                        controller.videoQuality = self.videoRecorderOptions.quality
+                        controller.cameraFlashMode = self.videoRecorderOptions.flashMode
                     }
                     
                     if #available(iOS 8.0, *) {
@@ -116,21 +108,23 @@ public class SMDImagePicker: NSObject {
                     controller.sourceType = UIImagePickerControllerSourceType.photoLibrary
                     
                     if media == .choosePhoto {
-                        controller.allowsEditing = self.photoGallaryAllowsEditing
+                        controller.allowsEditing = self.photoGallaryOptions.allowsEditing
                         if SMDImagePicker.canUserPickPhotosFromPhotoLibrary() {
-                            controller.mediaTypes = self.photoGallaryMediaTypes
+                            controller.mediaTypes = self.photoGallaryOptions.mediaTypes
                         }
                     } else if media == .chooseVideo {
-                        controller.allowsEditing = self.videoGallaryAllowsEditing
-                        controller.videoMaximumDuration = self.videoGallaryMaximumDuration
+                        controller.allowsEditing = self.videoGallaryOptions.allowsEditing
+                        controller.videoMaximumDuration = self.videoGallaryOptions.maximumDuration
                         if SMDImagePicker.canUserPickVideosFromPhotoLibrary() {
-                            controller.mediaTypes = self.videoGallaryMediaTypes
+                            controller.mediaTypes = self.videoGallaryOptions.mediaTypes
                         }
                     }
                     
                     if #available(iOS 8.0, *) {
                         controller.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
                     }
+                    controller.popoverPresentationController?.sourceView = self.ipadOptions.sourceView
+                    
                     controller.delegate = self
                     rootVC.present(controller, animated: true, completion: nil)
                 } else {
