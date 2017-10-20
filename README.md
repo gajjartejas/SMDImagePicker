@@ -95,10 +95,13 @@ imagePicker.choose(media: .chooseVideo, presentFrom: self) { (media, status) in
     }
 
 //For Record Video
-let options = SMDImagePicker.PhotoCaptureOptions(allowsEditing: true,
-                                                 cameraDevice: .rear,
-                                                 mediaTypes: [kUTTypeMovie as String],
-                                                 flashMode: .auto)
+//Optional
+let options = SMDImagePicker.VideoRecorderOptions(allowsEditing: true,
+                                                  cameraDevice: .rear,
+                                                  maximumDuration: 2*60, //Duration 2 Minutes
+                                                  quality: .typeHigh,
+                                                  flashMode: .auto)
+
 imagePicker.configure(options)
 imagePicker.capture(media: .takeVideo, presentFrom: self) { (media, status) in
     if status == .success {
